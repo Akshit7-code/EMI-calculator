@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="outercontainer">
+        <h1>EMI Calculator</h1>
+        <hr>
+        <div class="container">
+            <div>
+                <button id="home" class="btn btn-click">Home loan</button>
+                <button id="personal" class="btn">Personal loan</button>
+                <button id="car" class="btn">Car loan</button>
+                <form id="Home-form" class="forms">
+                    <div class="form-group">
+                        <label for="loanAmount">Home Loan Amount:</label>
+                        <span class="span3">₹</span>
+                        <input id="loanAmount" type="number" placeholder="0" value="0">
+                    </div>
+                    <input type="range" id="rangeSlider" min="0" max="1000000" value="0">
+
+                    <div class="form-group">
+                        <label for="interestRate">Interest Rate (%):</label>
+                        <span class="span3">%</span>
+                        <input id="interestRate" type="number" min="0" max="30" placeholder="0" value="">
+                    </div>
+                    <input type="range" id="rateslide" min="0" max="30" value="0">
+
+                    <div class="form-group">
+                        <label for="loanTenure">Loan Tenure(in years):</label>
+                        <span class="span3">Yr</span>
+                        <input id="loanTenure" type="number" min="0" max="30" placeholder="0" value="0">
+                    </div>
+                    <input type="range" id="tenureslide" min="0" max="30" value="0"><br>
+
+                    <button type="button" id="calculate">Calculate EMI</button>
+                </form>
+                <div class="resultbox">
+                    <!-- <h2>EMI Amount:</h2> -->
+                    <div class="result">
+                        <p class="para">Monthly EMI:</p>
+                        <p id="emi"></p>
+                    </div>
+                    <hr>
+        
+                    <div class="result">
+                        <p class="para">Principal amount:</p>
+                        <p id="Principalamount"></p>
+                    </div>
+                    <hr>
+        
+                    <div class="result">
+                        <p class="para">Total amount:</p>
+                        <p id="totalamount"></p>
+                    </div>
+                    <hr>
+                    <br>
+        
+                </div>
+            </div>
+
+            <div class="containersecond">
+                <!-- Circular progress bar -->
+                 <div>
+                     <label><span style="background-color: rgb(202, 202, 202);"></span>Principal amount</label>
+                     <label><span style="background:linear-gradient(90deg,red,yellow,green);"></span>Interests amount </label>
+                 </div>
+                <div class="circular-progress">
+                  <div class="inner-circle">
+                    <span id="progress-value">0%</span>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

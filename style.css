@@ -1,0 +1,221 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    margin: 0;
+}
+
+.outercontainer{
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    margin: 35px 0;
+    
+}
+.outercontainer h1{
+    text-align: center;
+}
+.container {
+    /* padding: 15px;
+    border-radius: 8px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.forms{
+    margin: 15px 0;
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #333;
+}
+input[type="range"]{
+    width: 100%;
+    accent-color: red;
+    margin: 0 0 40px 0;
+}
+input[type="number"]{
+    width: calc(27% - 20px);
+    padding: 10px 25px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: end;
+    color: rgb(1, 130, 1);
+}
+::placeholder{
+    color: rgb(1, 130, 1);
+}
+#valueDisplay{
+    width: calc(31% - 20px);
+    padding: 10px 10px 10px 20px;
+}
+#calculate {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color:rgba(255, 0, 0, 0.899);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 15px 0;
+    transition: background-color 0.3s ease;
+}
+
+#calculate:hover {
+    background-color: rgba(205, 7, 7, 0.899);
+}
+
+.result {
+    margin-top: 20px;
+}
+
+h2 {
+    margin: 0;
+    color: #333;
+}
+
+.para {
+    font-size: 18px;
+}
+
+/* button */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(147, 147, 147, 0.85);
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: bolder;
+    transition: background-color 0.3s ease;
+}
+.btn-click{
+    background-color:rgba(255, 0, 0, 0.899);
+    color: white;
+}
+
+#personal-form{
+    display: none;
+}
+#car-form{
+    display: none;
+}
+
+.container label{
+    font-weight: 600;
+}
+.resultbox{
+    width:70%;
+    margin:30px auto;
+    display: none;
+}
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.result p{
+    margin:0;
+    font-size: 18px;
+}
+
+.span3{
+    position: absolute;
+    right: 5px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* --------------progress bar ---------------  */
+
+
+  .containersecond {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .containersecond label{
+    font-size: 12px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    /* margin: 5px 10px; */
+  }
+  .containersecond label span{
+    background-color: #333;
+    padding: 0 14px;
+    border-radius: 20px;
+    margin-right: 15px;
+  }
+  .circular-progress {
+    position: relative;
+    /* right: px; */
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    margin: 15px 20px;
+    background: conic-gradient(green 0deg, green 0deg, lightgray 0deg);
+  }
+  
+  .inner-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #progress-value {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+ .containersecond input[type="range"] {
+    margin-top: 20px;
+    width: 200px;
+  }
+  
+
+@media (max-width:600px) {
+    .container{
+        flex-direction: column;
+    }
+}
